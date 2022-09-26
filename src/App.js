@@ -20,6 +20,7 @@ import {
   ColorMapping,
   ColorPicker,
   Editor,
+  Line
 } from "./pages";
 import "./App.css";
 
