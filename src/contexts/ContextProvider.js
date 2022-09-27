@@ -21,12 +21,14 @@ export const ContextProvider = ({ children }) => {
     setCurrentMode(e.target.value);
 
     localStorage.setItem("themeMode", e.target.value);
+    // close theme settings sidebar when an option is selected
     setThemeSettings(false)
   };
   const setColor = (color) => {
     setCurrentColor(color);
 
     localStorage.setItem("colorMode", color);
+    // close theme settings sidebar when an option is selected
     setThemeSettings(false)
   };
 
