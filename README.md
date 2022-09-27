@@ -1,7 +1,5 @@
 # React Dashboard
 
-Dashboard application designed to showcase often-used functionalities wtihin dashboards, explore different tools for styling in React, and showcase to employers my ability to work on large scale, complex applications that are mobile friendly.
-
 ## Resources Used
 Tutorial: (JS-Mastery Youtube channel)[https://www.youtube.com/watch?v=jx5hdo50a2M]
 Component Library: (SyncFusion Components)[https://www.syncfusion.com/?utm_source=youtube&utm_medium=video&utm_campaign=syncfusion_javascriptmastery_yt]
@@ -9,33 +7,7 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
 
 # Architecture
 
-
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -43,22 +15,22 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./src/data/shoppyDashboardScreenGrab.jpg" alt="Shoppy Logo" width="180" height="180">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Shoppy Dashboard</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    React App showcasing SyncFusions components library created following a JS Mastery tutorial.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://www.syncfusion.com/?utm_source=youtube&utm_medium=video&utm_campaign=syncfusion_javascriptmastery_yt"><strong>Link to the Deployed Site »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://www.youtube.com/c/JavaScriptMastery">JS Mastery</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://www.syncfusion.com/?utm_source=youtube&utm_medium=video&utm_campaign=syncfusion_javascriptmastery_yt">SyncFusion</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://rneyrinck.github.io/Portfolio-2022/">My Portfolio</a>
   </p>
 </div>
 
@@ -97,16 +69,15 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Dashboard application designed to showcase often-used functionalities wtihin dashboards, explore different tools for styling in React, and showcase to employers my ability to work on large scale, complex applications that are mobile friendly.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Whats cool about it:
+* SyncFusion is awesome! Creating Kanban boards, drag and drop calendars, or complex data visualization usually takes forever, but SyncFusion let me utilize their cleverly built UI components to make show stopping components in a matter of moments instead of days.
+* Most companies use some sort of internal tool with a dashboard functionality. This project allowed me to gain experience in quickly reaching MVP on a large scale projects. 
+* The dashboard is only front-end at the moment but its clean code will make adding a backend simple.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Thanks for taking a look at the readme, if you have any questions please feel free to reach out through my portfolio!
 
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,84 +85,40 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This project was built using base code provided by JS Mastery - mainly placeholder content since there isn't a backend yet. SyncFusion is used as a component library with Material UI for styling.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* React.js
+* SyncFusion
+* Material UI
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## REACT ARCHITECTURE
 
+| Component     |                                              Description                                               |
+| ------------- | :----------------------------------------------------------------------------------------------------: |
+| App           |                                 This will render the react components                                  |
+| components    |                   Houses all components in application for streamlined architecture                    |
+| data and contexts         |             Holds often called snippets such as the API call, images, and placeholder URLS             |
+| ChannelCard   |                Displays quick content for youtube Channel as card format in video feeds                |
+| ChannelDetail |          Displays channel information including views, subscribers and all videos of channel           |
+| Feed          | Displays videos either searched or tabbed to. Also displays sidebar component of different video types |
+| NavBar        |                         Header with logo link to feed, and searchbar component                         |
+| SearchBar     |                 Search for specific videos functionality leads to searchfeed component                 |
+| SearchFeed    |                                Displays SearchBar results as video feed                                |
+| SideBar       |                                   Displays video categories on feed                                    |
+| VideoCard     |                             Displays video details in card format on feeds                             |
+| VideoDetail   |                             Displays video with sidebar of related videos                              |
+| Videos        |                                   Displays videos based on API calls                                   |
 
+## Navigation
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+| **URL**                          | **HTTP Verb** | **Action** | **Description**          |
+| -------------------------------- | ------------- | ---------- | ------------------------ |
+| /                                | GET           | read       | view feed                |
+| /video/:id                                | GET           | read       | view video detail                |
+| /channel/:id                                | GET           | read       | view channel detail                |
+| /search/:searchTerm                                | GET           | read       | view searched results in feed                |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
