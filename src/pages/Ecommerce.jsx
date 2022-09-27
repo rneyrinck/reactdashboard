@@ -2,7 +2,7 @@ import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 import { Stacked, Pie, Button, SparkLine } from "../components";
-import { earningData, SparkLineAreaData, EcomPieChartDat } from "../data/dummy";
+import { earningData, SparklineAreaData, EcomPieChartDat } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
@@ -10,10 +10,13 @@ const Ecommerce = () => {
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         {/* earnings top card with download button, and image banner  */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounder-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
-            <p className="font-bold text-gray-400">Earnings</p>
-            <p className="text-2xl">$63,488.90</p>
+            <div>
+              <p className="font-bold text-gray-400">Earnings</p>
+              <p className="text-2xl">$63,488.90</p>
+            </div>
+            {/* button here */}
           </div>
           {/* download button */}
           <div className="mt-6">
@@ -31,7 +34,7 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
             >
               <button
                 type="button"
@@ -51,9 +54,10 @@ const Ecommerce = () => {
           ))}
         </div>
       </div>
+
       {/* revenue updates card -> left card with line graph */}
       <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
@@ -71,6 +75,7 @@ const Ecommerce = () => {
               </p>
             </div>
           </div>
+
           <div className="mt-10 flex flex-wrap justify-center gap-10">
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
@@ -83,25 +88,32 @@ const Ecommerce = () => {
                 <p className="text-gray-500 mt-1">Budget</p>
               </div>
               <div className="mt-8">
-                <p>
-                  <span className="text-3xl font-semibold">$48,438</span>
-                </p>
+                <p className="text-3xl font-semibold">$48,438</p>
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
-
+              {/* line graph */}
               <div className="mt-5">
                 <SparkLine
                   currentColor="blue"
                   id="line-sparkline"
-                  type="line"
+                  type="Line"
                   height="80px"
                   width="250px"
-
-                  data={SparkLineAreaData}
-
+                  data={SparklineAreaData}
                   color="blue"
                 />
               </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="blue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
