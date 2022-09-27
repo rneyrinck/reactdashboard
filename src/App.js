@@ -68,7 +68,7 @@ const App = () => {
             {/* route container */}
             <div>
               {/* change themes like color -> sidebar opened when bottom right hand gear buttom is engaged */}
-            {ThemeSettings && <ThemeSettings />}
+            {themeSettings && <ThemeSettings />}
 
               <Routes>
                 {/* dashboard */}

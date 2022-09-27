@@ -8,7 +8,8 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
-  const { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+    useStateContext();
   return (
     // bottom righthand setting button sidebar popup
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
@@ -18,7 +19,7 @@ const ThemeSettings = () => {
           {/* close settings sidebar */}
           <button
             type="button"
-            onClick={() => {setThemeSettings(false)}}
+            onClick={() => setThemeSettings(false)}
             style={{ color: "rgb(153,171,180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
           >
@@ -57,7 +58,7 @@ const ThemeSettings = () => {
           </div>
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4">
-          <p className="font-semibold text-lg">Theme Options</p>
+          <p className="font-semibold text-lg">Theme Colors</p>
           <div className="flex gap-3">
             {themeColors.map((item, index) => (
               <TooltipComponent
@@ -69,14 +70,11 @@ const ThemeSettings = () => {
                   <button
                     className="h-10 w-10 rounded-full cursor-pointer"
                     style={{ backgroundColor: item.color }}
-                    onClick={() => 
-                      setColor(item.color)}
-                  > 
+                    onClick={() => setColor(item.color)}
+                  >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                       item.color === currentColor 
-                          ? "block"
-                          : "hidden"
+                        item.color === currentColor ? "block" : "hidden"
                       } `}
                     />
                   </button>
