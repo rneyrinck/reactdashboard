@@ -2,6 +2,7 @@ import React from 'react'
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, DateTime, Legend, Tooltip, LineSeries } from '@syncfusion/ej2-react-charts';
 
 import { lineCustomSeries, LinePrimaryYAxis, LinePrimaryXAxis  } from '../../data/dummy';
+// commented out code is for dark mode
 import { useStateContext } from '../../contexts/ContextProvider';
 
 const LineChart = () => {
@@ -14,7 +15,7 @@ const LineChart = () => {
     primaryYAxis={LinePrimaryYAxis}
     chartArea={{border: {width: 0}}}
     tooltip={{enable: true}}
-    // background={currentMode==="Dark"? '#33373e':'#fff'}
+    background={currentMode==="Dark"? '#33373e':'#fff'}
     >
       <Inject services={[LineSeries, DateTime, Legend, Tooltip]}/>
       <SeriesCollectionDirective>
