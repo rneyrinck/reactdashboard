@@ -16,7 +16,7 @@ const Cart = () => {
           <p className="font-semibold text-lg">Shopping Cart</p>
           <Button
             icon={<MdOutlineCancel />}
-            color="black"
+            color="rgb(153, 171, 180)"
             bgHoverColor="light-gray"
             size="2xl"
             borderRadius="50%"
