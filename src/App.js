@@ -82,7 +82,7 @@ const App = () => {
 
               <Routes>
                 {/* dashboard */}
-                <Route path="/" element={<Ecommerce />} />
+                <Route path="/" basename="/reactdashboard" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* pages */}
