@@ -14,7 +14,7 @@
   <p align="center">
     React App showcasing SyncFusions components library created following a JS Mastery tutorial.
     <br />
-    <a href="https://www.syncfusion.com/?utm_source=youtube&utm_medium=video&utm_campaign=syncfusion_javascriptmastery_yt"><strong>Link to the Deployed Site »</strong></a>
+    <a href="https://rneyrinck.github.io/reactdashboard/"><strong>Link to the Deployed Site »</strong></a>
     <br />
     <br />
     <a href="https://www.youtube.com/c/JavaScriptMastery">JS Mastery</a>
