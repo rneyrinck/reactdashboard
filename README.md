@@ -1,6 +1,7 @@
 # React Dashboard
 
 ## Resources Used
+
 Tutorial: (JS-Mastery Youtube channel)[https://www.youtube.com/watch?v=jx5hdo50a2M]
 Component Library: (SyncFusion Components)[https://www.syncfusion.com/?utm_source=youtube&utm_medium=video&utm_campaign=syncfusion_javascriptmastery_yt]
 React Component Library: (SyncFusion React Components)[https://www.syncfusion.com/react-components]
@@ -8,8 +9,6 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
 # Architecture
 
 <a name="readme-top"></a>
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -34,8 +33,6 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -44,6 +41,7 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#react-acrchitecture">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -62,65 +60,90 @@ React Component Library: (SyncFusion React Components)[https://www.syncfusion.co
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+## About The Project
 
 Dashboard application designed to showcase often-used functionalities wtihin dashboards, explore different tools for styling in React, and showcase to employers my ability to work on large scale, complex applications that are mobile friendly.
 
 Whats cool about it:
-* SyncFusion is awesome! Creating Kanban boards, drag and drop calendars, or complex data visualization usually takes forever, but SyncFusion let me utilize their cleverly built UI components to make show stopping components in a matter of moments instead of days.
-* Most companies use some sort of internal tool with a dashboard functionality. This project allowed me to gain experience in quickly reaching MVP on a large scale projects. 
-* The dashboard is only front-end at the moment but its clean code will make adding a backend simple.
+
+- SyncFusion is awesome! Creating Kanban boards, drag and drop calendars, or complex data visualization usually takes forever, but SyncFusion let me utilize their cleverly built UI components to make show stopping components in a matter of moments instead of days.
+- Most companies use some sort of internal tool with a dashboard functionality. This project allowed me to gain experience in quickly reaching MVP on a large scale projects.
+- The dashboard is only front-end at the moment but its clean code will make adding a backend simple.
 
 Thanks for taking a look at the readme, if you have any questions please feel free to reach out through my portfolio!
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
 This project was built using base code provided by JS Mastery - mainly placeholder content since there isn't a backend yet. SyncFusion is used as a component library with Material UI for styling.
 
-* React.js
-* SyncFusion
-* Material UI
+- React.js
+- SyncFusion
+- Material UI
 
-## REACT ARCHITECTURE
+### REACT ARCHITECTURE
 
-| Component     |                                              Description                                               |
-| ------------- | :----------------------------------------------------------------------------------------------------: |
-| App           |                                 This will render the react components                                  |
-| components    |                   Houses all components in application for streamlined architecture                    |
-| data and contexts         |             Holds often called snippets such as the API call, images, and placeholder URLS             |
-| ChannelCard   |                Displays quick content for youtube Channel as card format in video feeds                |
-| ChannelDetail |          Displays channel information including views, subscribers and all videos of channel           |
-| Feed          | Displays videos either searched or tabbed to. Also displays sidebar component of different video types |
-| NavBar        |                         Header with logo link to feed, and searchbar component                         |
-| SearchBar     |                 Search for specific videos functionality leads to searchfeed component                 |
-| SearchFeed    |                                Displays SearchBar results as video feed                                |
-| SideBar       |                                   Displays video categories on feed                                    |
-| VideoCard     |                             Displays video details in card format on feeds                             |
-| VideoDetail   |                             Displays video with sidebar of related videos                              |
-| Videos        |                                   Displays videos based on API calls                                   |
+| Component           |                                  Description                                   |
+| ------------------- | :----------------------------------------------------------------------------: |
+| ----- src -------   | :----------------------------------------------------------------------------: |
+| App                 |                     This will render the react components                      |
+| components          |       Houses all components in application for streamlined architecture        |
+| data and contexts   | Holds often called snippets such as the API call, images, and placeholder URLS |
+| Pages               |                             Holds page structures                              |
+| -- components ---   | :----------------------------------------------------------------------------: |
+| components/charts   |     Folder containing charts that are only called inside other components      |
+| charts/LineChart    |           SyncFusion linechart component rendered in eccomerce page            |
+| charts/Pie          |        SyncFusion pie chart component rendered in pages/charts/pie page        |
+| charts/SparkLine    |          SyncFusion chart component rendered in pages/charts/pie page          |
+| charts/Stacked      |             SyncFusion chart component rendered in eccomerce page              |
+| Button              |                           Reusable button component                            |
+| Cart                |             Cart dropdown menu called in the navbar (Display Only)             |
+| ChartsHeader        |                 Reusable header for all charts in pages folder                 |
+| Chat                |             Chat dropdown menu called in the navbar (Display Only)             |
+| Footer              |          Simple footer component called below browserrouter in App.js          |
+| Header              |              Reusable header used on all pages except chart pages              |
+| Index.jsx           |      holds shorthand of all files in components folder for quick exports       |
+| NavBar              |   logo link to eccomerce, renders chat, userprofile, cart, and notification    |
+| Notification        |    Notification dropdown, displays quickview of new activity (Display Only)    |
+| SideBar             |       Displays navigation menu as quarter overlay on left side of screen       |
+| ThemeSettings       |      Displays settings menu to change theme to dark/light mode and color       |
+| UserProfile         |         UserProfile dropdown menu called in the navbar (Display Only)          |
+| ---- pages -----    | :----------------------------------------------------------------------------: |
+| pages/charts        |           Folder containing charts that make up the body of one page           |
+| charts/Area         |           SyncFusion Area chart component inflation rate percentage            |
+| charts/Bar          |          SyncFusion bar graph component displays Olympic medal counts          |
+| charts/ColorMapping |         SyncFusion line chart component rendered in as a heat average          |
+| charts/Financial    |            SyncFusion data plot component rendered as stock ticker             |
+| charts/Line         |               SyncFusion line graph component for inflation rate               |
+| charts/Pie          |             SyncFusion bar graph component project cost breakdown              |
+| charts/Pyramid      |             SyncFusion bar graph component Food calorie breakdown              |
+| charts/Stacked      |   SyncFusion bar graph component revenue breakdown(also called in ecommerce)   |
+| Calendar            |            Fully editable calendar with drag-and-drop functionality            |
+| ColorPicker         |      Two color swatches when a color is selected it changes color of pen       |
+| Customers           |        Sortable, editable(with delete or change) table of customer info        |
+| Ecommerce           |        Main dashboard page, displays quickreference info to most tables        |
+| Editor              |                            Fully usable text editor                            |
+| Employees           |  Searchable, sortable, editable(with delete or change) table of employee info  |
+| Index.jsx           |         holds shorthand of all files in pages folder for quick exports         |
+| Kanban              | Jira clone kanban board. drag and drop (lacks addition or deletion as of now)  |
+| Orders              |         Sortable, editable(with delete or change) table of orders info         |
 
-## Navigation
+### Navigation
 
-| **URL**                          | **HTTP Verb** | **Action** | **Description**          |
-| -------------------------------- | ------------- | ---------- | ------------------------ |
-| /                                | GET           | read       | view feed                |
-| /video/:id                                | GET           | read       | view video detail                |
-| /channel/:id                                | GET           | read       | view channel detail                |
-| /search/:searchTerm                                | GET           | read       | view searched results in feed                |
+| **URL**             | **HTTP Verb** | **Action** | **Description**               |
+| ------------------- | ------------- | ---------- | ----------------------------- |
+| /                   | GET           | read       | view dashboard                |
+| /ecommerce          | GET           | read       | view dashboard                |
+| /_file name_        | GET           | read       | view file in question         |
+|
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -136,74 +159,23 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
+
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Robert Neyrinck - [LinkedIn](https://www.linkedin.com/in/robert-neyrinck/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+- [JS Mastery Github Repo](https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/pages/Charts/Stacked.jsx)
+- [JS Mastery Youtube Tutorial](https://www.youtube.com/watch?v=jx5hdo50a2M)
+- [SyncFusion Docs](https://ej2.syncfusion.com/documentation/grid/getting-started/)
+- [Material UI](https://mui.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
