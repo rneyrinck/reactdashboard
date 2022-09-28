@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      <BrowserRouter>
+      <BrowserRouter basename="/reactdashboard">
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             {/* settings button */}
@@ -82,7 +82,7 @@ const App = () => {
 
               <Routes>
                 {/* dashboard */}
-                <Route path="/" basename="/reactdashboard" element={<Ecommerce />} />
+                <Route path="/"  element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* pages */}
